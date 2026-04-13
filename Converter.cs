@@ -1,15 +1,19 @@
-﻿namespace knightmoves;
+﻿﻿namespace knightmoves;
 
 public class Converter{
-public decimal ConvertImplicitly(int number)
-{
+      public static int ConvertToInt(string input){
+         return int.Parse(input);
+      }
+      public static string ConvertToString(int input){
+         return input.ToString();
+      }
 
-      decimal doublednumber = number;
-return doublednumber;
-   }
-public int ConvertExplicitly(double num1)
-   {
-     
-      return (int)num1;
-   }
+      public decimal ConvertImplicitly(int input){
+         decimal result = input;
+         return result;
+      }
+
+      public int ConvertExplicitly(decimal input){
+         return (int)input;
+      }
 }
